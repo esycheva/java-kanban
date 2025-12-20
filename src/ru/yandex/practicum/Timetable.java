@@ -80,15 +80,15 @@ public class Timetable {
     	for (Map.Entry<DayOfWeek, Map<TimeOfDay, ArrayList<TrainingSession>>> entry : timetable.entrySet()) {
     		Map<TimeOfDay, ArrayList<TrainingSession>> day = entry.getValue();
 
-    		for(Map.Entry<TimeOfDay, ArrayList<TrainingSession>> e : day.entrySet()) {
+    		for (Map.Entry<TimeOfDay, ArrayList<TrainingSession>> e : day.entrySet()) {
     			ArrayList<TrainingSession> sessions = e.getValue();
 
-    			for(TrainingSession session : sessions) {
+    			for (TrainingSession session : sessions) {
     				Coach coach = session.getCoach();
 
     				CounterOfTrainings matchCounter = null;
 
-    				for(CounterOfTrainings c : counters) {
+    				for (CounterOfTrainings c : counters) {
     					if (c.getFio().equals(coach.getFio())) {
     						c.incrementCounter();
     						matchCounter = c;
@@ -99,12 +99,12 @@ public class Timetable {
     					CounterOfTrainings counter = new CounterOfTrainings(coach.getFio());
     					counter.incrementCounter();
     					counters.add(counter);
-    				}    				
+    				}
     			}
     		}
      	}
     	counters.sort(counterComparator);
-    	return counters;	
+    	return counters;
     }
 }
 
