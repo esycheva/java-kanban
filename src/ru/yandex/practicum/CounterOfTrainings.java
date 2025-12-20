@@ -5,24 +5,24 @@ import java.util.Objects;
 public class CounterOfTrainings {
 	private String fio;
 	int counter;
-	
+
 	public CounterOfTrainings(String fio) {
 		this.fio = fio;
 		this.counter = 0;
 	}
-	
+
 	public String getFio() {
 		return this.fio;
 	}
-	
+
 	public int getCounter() {
 		return this.counter;
 	}
-	
+
 	public void incrementCounter() {
 		this.counter++;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -30,7 +30,7 @@ public class CounterOfTrainings {
 		CounterOfTrainings counterOfTraining = (CounterOfTrainings) o;
 		return Objects.equals(fio, counterOfTraining.fio);
 	}
-	
+
 	@Override
 	public int hashCode() {
 		int hash = 17;
