@@ -26,7 +26,7 @@ public class Coach {
     public String getMiddleName() {
         return middleName;
     }
-    
+
     public String getFio() {
     	return String.format("%s %s %s", surname, name, middleName);
     }

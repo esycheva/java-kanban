@@ -38,7 +38,7 @@ public class Timetable {
     	} else {
     		day = new TreeMap<>(comparator);
     	}
-    	
+
     	ArrayList<TrainingSession> sessionsInTime;
 
     	if (day.containsKey(trainingSession.getTimeOfDay())) {
@@ -60,10 +60,10 @@ public class Timetable {
     public ArrayList<TrainingSession> getTrainingSessionsForDayAndTime(DayOfWeek dayOfWeek, TimeOfDay timeOfDay) {
     	ArrayList<TrainingSession> result;
 
-    	if(timetable.containsKey(dayOfWeek)) {
+    	if (timetable.containsKey(dayOfWeek)) {
         	Map<TimeOfDay, ArrayList<TrainingSession>> day = timetable.get(dayOfWeek);
-        	
-        	if(day.containsKey(timeOfDay)) {
+
+        	if (day.containsKey(timeOfDay)) {
         		result = day.get(timeOfDay);
         	} else {
         		result = new ArrayList<TrainingSession>();
@@ -89,7 +89,7 @@ public class Timetable {
     				CounterOfTrainings matchCounter = null;
 
     				for(CounterOfTrainings c : counters) {
-    					if(c.getFio().equals(coach.getFio())) {
+    					if (c.getFio().equals(coach.getFio())) {
     						c.incrementCounter();
     						matchCounter = c;
     					}
