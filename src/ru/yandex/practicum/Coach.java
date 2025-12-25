@@ -2,11 +2,8 @@ package ru.yandex.practicum;
 
 public class Coach {
 
-    //фамилия
     private String surname;
-    //имя
     private String name;
-    //отчество
     private String middleName;
 
     public Coach(String surname, String name, String middleName) {

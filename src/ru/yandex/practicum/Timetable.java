@@ -30,7 +30,6 @@ public class Timetable {
     };
 
     public void addNewTrainingSession(TrainingSession trainingSession) {
-        //сохраняем занятие в расписании
     	Map<TimeOfDay, ArrayList<TrainingSession>> day;
 
     	if (timetable.containsKey(trainingSession.getDayOfWeek())) {

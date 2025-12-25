@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class CounterOfTrainings {
 	private String fio;
-	int counter;
+	private int counter;
 
 	public CounterOfTrainings(String fio) {
 		this.fio = fio;
@@ -12,15 +12,15 @@ public class CounterOfTrainings {
 	}
 
 	public String getFio() {
-		return this.fio;
+		return fio;
 	}
 
 	public int getCounter() {
-		return this.counter;
+		return counter;
 	}
 
 	public void incrementCounter() {
-		this.counter++;
+		counter++;
 	}
 
 	@Override
